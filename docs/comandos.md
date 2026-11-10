@@ -15,3 +15,31 @@ Referência rápida dos comandos praticados no curso, organizada por etapa do fl
 | `git log --oneline --graph` | Mostra o histórico resumido, em formato de grafo |
 
 Arquivos que não devem ser versionados (logs, pastas de editor) são listados no `.gitignore`.
+
+## 2. Desfazendo erros
+
+| Situação | Comando |
+|:--|:--|
+| Descartar alterações ainda não preparadas em um arquivo | `git restore <arquivo>` |
+| Tirar um arquivo do stage, mantendo a alteração | `git restore --staged <arquivo>` |
+| Corrigir a mensagem do último commit (ainda não publicado) | `git commit --amend -m "nova mensagem"` |
+| Desfazer um commit já publicado, sem reescrever o histórico | `git revert <hash>` |
+
+`git revert` cria um commit novo que neutraliza o anterior e por isso é seguro em branches compartilhadas.
+`--amend` reescreve o histórico e só deve ser usado em commits locais.
+
+## 3. Branches, merge e rebase
+
+| Comando | O que faz |
+|:--|:--|
+| `git branch` | Lista as branches locais |
+| `git switch -c feature/nome` | Cria uma branch e muda para ela |
+| `git switch main` | Volta para a branch principal |
+| `git merge feature/nome` | Integra a branch na branch atual |
+| `git merge --abort` | Cancela um merge com conflito |
+| `git rebase main` | Reaplica os commits da branch atual sobre a `main` atualizada |
+
+Em um conflito, o Git marca o trecho com `<<<<<<<`, `=======` e `>>>>>>>`. Escolha o conteúdo correto,
+remova os marcadores, rode `git add` e conclua com `git commit`.
+
+Regra de ouro: use rebase para organizar o trabalho local e merge para integrar com a equipe.
