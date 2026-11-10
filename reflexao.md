@@ -27,3 +27,17 @@ Ao longo das atividades passei a tratar o histórico como parte do trabalho:
   fazer sentido quando vi o hash mudar.
 - **Code Review.** Escrever comentário técnico, classificado como Sugestão, Bloqueador ou Opcional, é diferente de
   apenas ler o código: é preciso justificar o motivo e criticar a solução, não a pessoa.
+
+## Como vou aplicar
+
+- Abrir uma Issue antes de começar qualquer mudança relevante e vincular o Pull Request com `Closes #N`.
+- Trabalhar sempre em branch, nunca direto na `main`, e manter cada PR com uma mudança principal.
+- Escrever mensagens de commit no padrão Conventional Commits, para que o histórico sirva de documentação.
+- Revisar o próprio diff com `git diff --staged` antes de cada commit.
+- Usar `git revert` em histórico compartilhado e reservar `--amend` e `rebase` para commits locais.
+
+## Conclusão
+
+O curso mudou a forma como enxergo o repositório: ele deixou de ser apenas o lugar onde o código fica guardado e passou
+a ser o registro de como o trabalho foi feito, discutido e revisado. O portfólio publicado com GitHub Pages e este
+projeto, desenvolvido com Issues, branches e Pull Requests, mostram esse fluxo de ponta a ponta.
