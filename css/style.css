@@ -60,3 +60,7 @@ a { color: var(--link); text-decoration: none; }
 a:hover, a:focus-visible { text-decoration: underline; }
 
 footer { margin-top: 32px; padding-top: 24px; padding-bottom: 48px; border-top: 1px solid var(--border); color: var(--text-3); font-size: 14px; }
+
+nav { display: flex; flex-wrap: wrap; gap: 8px 24px; margin-top: 24px; }
+nav a { color: var(--text); font-size: 14px; }
+html { scroll-behavior: smooth; }
