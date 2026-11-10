@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Guia prático de Git e GitHub, resumo do curso do CEFET-MG.">
+  <title>Guia Prático de Git e GitHub</title>
+</head>
+<body>
+  <header>
+    <p>Curso de Git e GitHub · CEFET-MG</p>
+    <h1>Guia Prático de Git e GitHub</h1>
+    <p>Do primeiro commit ao portfólio publicado: o que foi praticado ao longo do curso, em um só lugar.</p>
+  </header>
+
+  <main>
+    <section id="local">
+      <h2>1. Ciclo de vida local</h2>
+      <p>Todo arquivo passa por estados: não rastreado, modificado, preparado (staged) e commitado.</p>
+      <ul>
+        <li><code>git init</code> cria o repositório e <code>git status</code> mostra o estado atual.</li>
+        <li><code>git add</code> prepara as mudanças e <code>git commit</code> grava o snapshot.</li>
+        <li><code>.gitignore</code> evita versionar logs, pastas de editor e arquivos locais.</li>
+        <li>Mensagens seguem o padrão Conventional Commits, como <code>feat:</code>, <code>fix:</code> e <code>docs:</code>.</li>
+      </ul>
+    </section>
+
+    <section id="erros">
+      <h2>2. Desfazendo erros</h2>
+      <ul>
+        <li><code>git restore</code> descarta alterações ainda não commitadas.</li>
+        <li><code>git commit --amend</code> corrige a mensagem do último commit, ainda não publicado.</li>
+        <li><code>git revert</code> neutraliza um commit criando um novo, o que é seguro para histórico compartilhado.</li>
+      </ul>
+    </section>
+
+    <section id="branches">
+      <h2>3. Branches, merge e rebase</h2>
+      <ul>
+        <li>Uma branch é um ponteiro leve para um commit, e <code>git switch -c</code> cria e muda de branch.</li>
+        <li><code>git merge</code> une históricos e, se duas branches mexem na mesma linha, o conflito é resolvido à mão.</li>
+        <li><code>git rebase</code> reaplica commits sobre uma nova base e só deve ser usado em commits locais.</li>
+      </ul>
+    </section>
+
+    <section id="equipe">
+      <h2>4. Trabalho em equipe</h2>
+      <ul>
+        <li>No GitHub Flow, cada mudança nasce de uma Issue, vira branch, passa por Pull Request e Code Review.</li>
+        <li><code>Closes #N</code> na descrição do PR fecha a Issue automaticamente no merge.</li>
+        <li>Comentários de review são classificados como Sugestão, Bloqueador ou Opcional.</li>
+      </ul>
+    </section>
+
+    <section id="pages">
+      <h2>5. GitHub Pages</h2>
+      <p>Um repositório público com <code>index.html</code> na raiz vira um site, ativado em Settings, Pages.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>
+      Projeto Integrador Final · Thiago Miranda Aboboreira ·
+      <a href="https://github.com/Thiago-Mi/ProjetoFinal">Repositório no GitHub</a>
+    </p>
+  </footer>
+</body>
+</html>
