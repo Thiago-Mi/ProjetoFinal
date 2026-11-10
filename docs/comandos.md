@@ -43,3 +43,18 @@ Em um conflito, o Git marca o trecho com `<<<<<<<`, `=======` e `>>>>>>>`. Escol
 remova os marcadores, rode `git add` e conclua com `git commit`.
 
 Regra de ouro: use rebase para organizar o trabalho local e merge para integrar com a equipe.
+
+## 4. Trabalho em equipe
+
+| Comando | O que faz |
+|:--|:--|
+| `git clone <url>` | Copia um repositório remoto para a máquina |
+| `git push -u origin feature/nome` | Publica a branch no GitHub |
+| `git pull` | Traz e integra as mudanças do remoto |
+| `git fetch upstream` | Busca atualizações do repositório original de um fork |
+| `git remote add upstream <url>` | Registra o repositório original como `upstream` |
+
+Fluxo do GitHub Flow: criar a Issue, criar a branch, commitar, publicar, abrir o Pull Request com
+`Closes #N`, passar pelo Code Review, fazer o merge e apagar a branch.
+
+Comentários de review são classificados como `[Sugestão]`, `[Bloqueador]` ou `[Opcional]`.
