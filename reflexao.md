@@ -14,3 +14,16 @@ Ao longo das atividades passei a tratar o histórico como parte do trabalho:
 - **Trabalho em equipe.** Percorri o ciclo completo do GitHub Flow: Issue, branch, Pull Request, Code Review e merge,
   com `Closes #N` fechando a Issue automaticamente.
 - **Publicação.** Com o GitHub Pages, o mesmo repositório que guarda o código passou a hospedar um site.
+
+## Dificuldades
+
+- **Conflitos de merge.** Foi a parte que mais exigiu atenção. Quando duas branches alteraram a mesma linha do
+  README, o Git não escolheu por mim: tive que ler os marcadores `<<<<<<<` e `>>>>>>>`, decidir o que manter e concluir o
+  merge. No trabalho em dupla o conflito reapareceu, porque os dois Pull Requests editavam o início do mesmo arquivo.
+  Aprendi que o segundo PR a ser integrado é o que sofre o conflito, e que PRs pequenos e em arquivos diferentes reduzem
+  esse risco.
+- **Reescrever histórico.** O `--amend` muda o hash do commit. Isso é inofensivo em um commit local, mas deixa de ser
+  quando o commit já foi publicado ou está em uso por outra pessoa. A regra do curso (rebase só no que é local) passou a
+  fazer sentido quando vi o hash mudar.
+- **Code Review.** Escrever comentário técnico, classificado como Sugestão, Bloqueador ou Opcional, é diferente de
+  apenas ler o código: é preciso justificar o motivo e criticar a solução, não a pessoa.
